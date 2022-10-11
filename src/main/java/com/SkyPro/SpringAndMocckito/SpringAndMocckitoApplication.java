@@ -1,13 +1,13 @@
-package com.SpringAndMocck.HoneWork;
+package com.SkyPro.SpringAndMocckito;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HoneWorkApplication {
+public class SpringAndMocckitoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HoneWorkApplication.class, args);
+		SpringApplication.run(SpringAndMocckitoApplication.class, args);
 	}
 
 }
