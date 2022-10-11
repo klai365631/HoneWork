@@ -22,7 +22,7 @@ public class EmployeeServiceTest {
 
     @ParameterizedTest
     @MethodSource("params")
-    public void addNegativeTest1(String name,
+    public void addsAnEmployeeAndChecksThatTheEmployeeWasAddedCorrectly(String name,
                                  String surname,
                                  int departament,
                                  double salary) {
@@ -36,7 +36,7 @@ public class EmployeeServiceTest {
 
     @ParameterizedTest
     @MethodSource("params")
-    public void addNegativeTest2(String name,
+    public void shouldThrownExceptionWhenEmployeeStorageisFull (String name,
                                  String surname,
                                  int departament,
                                  double salary) {
@@ -51,7 +51,7 @@ public class EmployeeServiceTest {
     }
 
     @Test
-    public void addNegativeTest3() {
+    public void validationСheck() {
         assertThatExceptionOfType(IncorrectNameException.class)
                 .isThrownBy(() -> employeeService.addEmployee("Иван", "Ivanoв", 1, 56000));
 
@@ -64,7 +64,7 @@ public class EmployeeServiceTest {
 
     @ParameterizedTest
     @MethodSource("params")
-    public void removeNegativeTest(String name,
+    public void testForDeletingANonExistentEmployee(String name,
                                    String surname,
                                    int departament,
                                    double salary) {
@@ -81,7 +81,7 @@ public class EmployeeServiceTest {
 
     @ParameterizedTest
     @MethodSource("params")
-    public void removePositiveTest(String name,
+    public void testForCheckingTheDeletionOfAnEmployee(String name,
                                    String surname,
                                    int departament,
                                    double salary) {
